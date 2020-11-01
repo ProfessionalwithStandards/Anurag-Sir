@@ -10,6 +10,7 @@ public class Word {
     private int mImageResId = -1;
     public static final int NO_IMAGE_FOUND = -1;
     public MediaPlayer mediaPlayer;
+    private int song;
 
     public Word(String defaultranslation, String translation1) {
         this.defaultranslation = defaultranslation;
@@ -22,6 +23,11 @@ public class Word {
         this.mImageResId = mImageResId;
         this.mediaPlayer = mediaPlayer;
     }
+    public Word(String defaultranslation, String translation1, int mImageResId) {
+        this.defaultranslation = defaultranslation;
+        this.translation1 = translation1;
+        this.mImageResId = mImageResId;
+    }
 
     public Word(String defaultranslation, String translation1 , MediaPlayer mediaPlayer) {
         this.defaultranslation = defaultranslation;
@@ -29,6 +35,12 @@ public class Word {
         this.mediaPlayer = mediaPlayer;
     }
 
+    public Word(String defaultranslation, String translation1, int mImageResId, int song) {
+        this.defaultranslation = defaultranslation;
+        this.translation1 = translation1;
+        this.mImageResId = mImageResId;
+        this.song = song;
+    }
 
 
     public MediaPlayer getM() {return mediaPlayer;}
@@ -49,4 +61,6 @@ public class Word {
     {
         return mImageResId != NO_IMAGE_FOUND;
     }
+
+    public int getSong() { return song; }
 }

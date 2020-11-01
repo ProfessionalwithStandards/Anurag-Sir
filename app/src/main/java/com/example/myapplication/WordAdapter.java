@@ -19,7 +19,7 @@ import androidx.annotation.Nullable;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
-    MediaPlayer mp = MediaPlayer.create(getContext(),R.raw.song);
+    MediaPlayer mp ;
 
     public WordAdapter(@NonNull Context context, ArrayList<Word> words) {
         super(context,0, words);
@@ -38,11 +38,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
 
-//        Button mbp = listitemview.findViewById(R.id.mb);
-//
-//
+        Button mbp = listitemview.findViewById(R.id.mb);
+
+
 //        mbp.setOnClickListener(new View.OnClickListener() {
 //            @Override
+//
 //
 //                    public void onClick(View v) {
 //                        mbp.setBackgroundResource(android.R.drawable.ic_media_pause);
@@ -50,7 +51,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 ////                        mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 ////                            @Override
 ////                            public void onPrepared(MediaPlayer mp) {
-//                                mp.start();
+////                                mp.start();
 ////                            }
 ////                        });
 //                    }

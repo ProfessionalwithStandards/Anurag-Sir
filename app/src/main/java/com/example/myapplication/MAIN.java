@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,16 +23,33 @@ public class MAIN extends AppCompatActivity {
         n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //          INTENT ---------
+
                 Intent I = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(I);
+
+                // -------------------------------
+
+//                //          Fragment ---------
+//                NumberFragment t1 = new NumberFragment();
+//                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//                ft.replace(R.id.Linear,t1);
+//                ft.commit();
             }
         });
 
         p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //          INTENT ---------
+
                 Intent I = new Intent(getApplicationContext(),Phrases.class);
                 startActivity(I);
+
+                // -------------------------------
+
             }
         });
     }
@@ -40,4 +58,6 @@ public class MAIN extends AppCompatActivity {
         Intent I = new Intent(this,MPTest.class);
         startActivity(I);
     }
+
+
 }

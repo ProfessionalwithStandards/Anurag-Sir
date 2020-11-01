@@ -1,41 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MAIN"
-    android:orientation="vertical"
-    android:paddingStart="105dp"
-    android:paddingTop="300dp"
-    >
-
-    <TextView
-        android:id="@+id/numbers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Numbers\n\n"
-        android:textSize="22sp"
-        android:letterSpacing=".7"
-        />
-
-    <TextView
-        android:id="@+id/phrases"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:text="Phrases"
-        android:letterSpacing=".7"
-        />
+    tools:context=".MAIN">
 
     <Button
         android:id="@+id/mptest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="MPTEST"
-        android:layout_marginLeft="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="149dp"
         android:onClick="next"
-        />
+        android:text="MPTEST"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phrases" />
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginBottom="44dp"
+        android:background="@color/teal_700"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/mptest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numbers" />
+
+    <TextView
+        android:id="@+id/numbers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="19dp"
+        android:textAlignment="center"
+        android:letterSpacing=".3"
+        android:text="Numbers"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/Linear"
+        app:layout_constraintEnd_toStartOf="@+id/phrases"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phrases"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="354dp"
+        android:textAlignment="center"
+        android:letterSpacing=".3"
+        android:text="Phrases"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/mptest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numbers"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
